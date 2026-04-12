@@ -8,9 +8,15 @@
         .WAV files with 8 or 16 kHz, 8-bit or 16-bit mono, µ-law, A-law, or PCM
         .WMA files with 8 or 16 kHz, 16-bit mono, µ-law, A-law, or PCM
 
-    For testing purposes, uploading .wav files is done locally. You will need to add your own .wav file in the root directory.
+    For testing purposes, uploading .wav files is done locally.
 
     You can get your Webex Bearer Token from https://developer.webex.com/docs/getting-started
+
+    To run:
+        - Node must be installed
+        - run "npm i"
+        - uncomment either "await updateMOHToCustom()" or "await updateMOHToSystem()" at the bottom
+        - run "node webex.js"
 */
 
 
