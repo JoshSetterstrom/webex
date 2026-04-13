@@ -1,0 +1,81 @@
+workspace:
+  meta:
+    enabled: true
+    path: /v1/workspaces/{workspaceId}
+
+  features:
+    enabled: true
+
+    numbers:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/numbers
+
+    callerId:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/callerId
+
+    emergencyCalling:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/emergencyCallbackNumber
+
+  callHandling:
+    enabled: true
+
+    musicOnHold:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/musicOnHold
+
+    incomingPermission:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/incomingPermission
+
+    outgoingPermission:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/outgoingPermission
+
+    callForwarding:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/callForwarding
+
+    callWaiting:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/callWaiting
+
+    intercept:
+      enabled: true
+      path: /v1/workspaces/{workspaceId}/features/intercept
+
+    selectiveAccept:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/selectiveAccept
+
+    selectiveForward:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/selectiveForward
+
+    selectiveReject:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/selectiveReject
+
+    sequentialRing:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/sequentialRing
+
+    simultaneousRing:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/simultaneousRing
+
+  callExperience:
+    enabled: true
+
+    callPolicies:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/callPolicies
+
+    voicemail:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/voicemail
+
+    doNotDisturb:
+      enabled: true
+      path: /v1/telephony/config/workspaces/{workspaceId}/doNotDisturb

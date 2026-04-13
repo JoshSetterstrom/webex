@@ -1,0 +1,107 @@
+location:
+  meta:
+    enabled: true
+    path: /v1/telephony/config/locations/{locationId}
+
+  calling:
+    enabled: true
+
+    dialing:
+      enabled: true
+
+      internalDialing:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/internalDialing
+
+    callHandling:
+      enabled: true
+
+      outgoingPermission:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/outgoingPermission
+
+      musicOnHold:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/musicOnHold
+
+      intercept:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/intercept
+
+      callRecording:
+        enabled: true
+
+        provider:
+          enabled: true
+          path: /v1/telephony/config/callRecording
+
+        announcements:
+          enabled: true
+          path: /v1/telephony/config/locations/{locationId}/callRecording/announcements
+
+        complianceAnnouncement:
+          enabled: true
+          path: /v1/telephony/config/locations/{locationId}/callRecording/complianceAnnouncement
+
+        emergencyCalls:
+          enabled: true
+          path: /v1/telephony/config/locations/{locationId}/callRecording/emergencyCalls
+
+    callingFeatures:
+      enabled: true
+
+      voicemail:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/voicemail
+
+      callCaptions:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/callCaptions
+
+      voicePortal:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/voicePortal
+
+      hotDesking:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/features/hotDesking
+
+      schedules:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/schedules
+
+      callPark:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/callParks/settings
+
+    deviceManagement:
+      enabled: true
+
+      deviceSettings:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/devices/settings
+
+  pstn:
+    enabled: true
+
+    pstnConfiguration:
+      enabled: true
+
+      mainNumber:
+        enabled: true
+        resolve:
+          from: meta.callingLineId.phoneNumber
+          path: /v1/telephony/config/numbers?number={value}
+          single: true
+          key: phoneNumbers
+
+    emergencyCalling:
+      enabled: true
+
+      callbackNumber:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/features/emergencyCallbackNumber
+
+      emergencyCallNotification:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/emergencyCallNotification
