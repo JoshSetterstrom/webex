@@ -3,79 +3,94 @@ workspace:
     enabled: true
     path: /v1/workspaces/{workspaceId}
 
+  license:
+    enabled: true
+    resolve:
+      from: meta.calling.webexCalling.licenses[0]
+      path: /v1/licenses/{value}
+
   features:
     enabled: true
 
     numbers:
       enabled: true
       path: /v1/workspaces/{workspaceId}/features/numbers
+      key: phoneNumbers
 
     callerId:
       enabled: true
       path: /v1/workspaces/{workspaceId}/features/callerId
 
     emergencyCalling:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/emergencyCallbackNumber
 
   callHandling:
     enabled: true
 
     musicOnHold:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/musicOnHold
 
     incomingPermission:
-      enabled: true
+      enabled: false
       path: /v1/workspaces/{workspaceId}/features/incomingPermission
 
     outgoingPermission:
-      enabled: true
+      enabled: false
       path: /v1/workspaces/{workspaceId}/features/outgoingPermission
 
     callForwarding:
       enabled: true
       path: /v1/workspaces/{workspaceId}/features/callForwarding
+      key: callForwarding
 
     callWaiting:
       enabled: true
       path: /v1/workspaces/{workspaceId}/features/callWaiting
 
     intercept:
-      enabled: true
+      enabled: false
       path: /v1/workspaces/{workspaceId}/features/intercept
 
     selectiveAccept:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/selectiveAccept
 
     selectiveForward:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/selectiveForward
 
     selectiveReject:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/selectiveReject
 
     sequentialRing:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/sequentialRing
 
     simultaneousRing:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/simultaneousRing
 
   callExperience:
-    enabled: true
+    enabled: false
 
     callPolicies:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/callPolicies
 
     voicemail:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/voicemail
 
     doNotDisturb:
-      enabled: true
+      enabled: false
       path: /v1/telephony/config/workspaces/{workspaceId}/doNotDisturb
+
+  devices:
+    enabled: true
+    resolve:
+      from: meta.id
+      path: /v1/devices?workspaceId={value}
+      key: items

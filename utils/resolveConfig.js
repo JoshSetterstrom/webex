@@ -1,45 +1,101 @@
 import flattenSingle from "./flattenSingle.js";
 
-const isObject = value => value && typeof value === 'object' && !Array.isArray(value);
+const isPlainObject = value => value !== null && typeof value === "object" && !Array.isArray(value);
+const isTraversable = value => value !== null && typeof value === "object";
+
+const tokenizePath = path => {
+	if (!path || typeof path !== "string") return [];
+
+	return path
+		.replace(/\[(\d+)\]/g, ".$1")
+		.split(".")
+		.filter(Boolean)
+		.map(part => (/^\d+$/.test(part) ? Number(part) : part));
+};
 
 const getNestedValue = (obj, path) => {
-    if (!path || typeof path !== 'string') return undefined;
+	const tokens = tokenizePath(path);
 
-    return path.split('.').reduce((acc, key) => acc?.[key], obj);
+	if (!tokens.length) return undefined;
+
+	return tokens.reduce((acc, key) => acc?.[key], obj);
+};
+
+const sortResolvedData = (data, sort) => {
+	if (!sort || !Array.isArray(data)) return data;
+
+	return [...data].sort((a, b) => {
+		const av = getNestedValue(a, sort);
+		const bv = getNestedValue(b, sort);
+
+		if (av == null && bv == null) return 0;
+		if (av == null) return 1;
+		if (bv == null) return -1;
+
+		if (typeof av === "number" && typeof bv === "number") return av - bv;
+
+		return String(av).localeCompare(String(bv));
+	});
+};
+
+const applyResolveOptions = (result, resolve) => {
+	let data;
+
+	if (resolve.single) data = flattenSingle(result, resolve.key || "items");
+	else if (resolve.key) data = result?.[resolve.key];
+	else data = result;
+
+	return sortResolvedData(data, resolve.sort);
 };
 
 const resolveNode = async (client, collectedData, resolve) => {
-    if (!resolve?.from || !resolve?.path) return { _error: true, message: 'Invalid resolve config' };
+	if (!resolve?.from || !resolve?.path) return { _error: true, message: "Invalid resolve config" };
 
-    const value = getNestedValue(collectedData, resolve.from);
+	const value = getNestedValue(collectedData, resolve.from);
 
-    if (value == null) return { _error: true, message: `Missing resolve value from "${resolve.from}"` };
+	if (value == null) return { _error: true, message: `Missing resolve value from "${resolve.from}"` };
 
-    const path = resolve.path.replace('{value}', encodeURIComponent(String(value)));
+	if (Array.isArray(value)) {
+		const results = await Promise.all(
+			value.map(async item => {
+				const path = resolve.path.replace("{value}", encodeURIComponent(String(item)));
+				const result = await client.get(path);
 
-    const result = client.safeGet
-        ? await client.safeGet(path)
-        : await client.get(path);
+				return applyResolveOptions(result, resolve);
+			})
+		);
 
-    if (resolve.single) return flattenSingle(result, resolve.key || 'items');
+		return results;
+	}
 
-    return result;
+	const path = resolve.path.replace("{value}", encodeURIComponent(String(value)));
+	const result = await client.get(path);
+
+	return applyResolveOptions(result, resolve);
 };
 
 const resolveConfig = async (client, collectedData) => {
-    const walk = async current => {
-        if (!isObject(current)) return current;
-        
-        if (isObject(current._resolve)) return resolveNode(client, collectedData, current._resolve);
+	const walk = async current => {
+		if (!isTraversable(current)) return current;
 
-        const output = Array.isArray(current) ? [] : {};
+		if (isPlainObject(current._resolve)) return resolveNode(client, collectedData, current._resolve);
 
-        for (const [key, value] of Object.entries(current)) output[key] = await walk(value);
+		if (Array.isArray(current)) {
+			const output = [];
 
-        return output;
-    };
+			for (const value of current) output.push(await walk(value));
 
-    return walk(collectedData);
+			return output;
+		}
+
+		const output = {};
+
+		for (const [key, value] of Object.entries(current)) output[key] = await walk(value);
+
+		return output;
+	};
+
+	return walk(collectedData);
 };
 
 export default resolveConfig;

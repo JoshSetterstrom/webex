@@ -3,13 +3,13 @@ import yaml from 'js-yaml';
 import walkConfig from '../utils/walkConfig.js';
 import resolveConfig from '../utils/resolveConfig.js';
 
-const getReport = async (namespace, client, id, exportData=false) => {
+const getSettings = async (namespace, client, locationId, id, exportData=false) => {
     const config = yaml.load(fs.readFileSync(`./config/${namespace}.yaml`, 'utf-8'));
-    const schema = config.workspace;
+    const schema = config[namespace];
 
     if (!schema) throw new Error(`Missing ${namespace} in config`);
 
-    const p1 = await walkConfig(client, schema, { [`${namespace}Id`]: id });
+    const p1 = await walkConfig(client, schema, { locationId, [`${namespace}Id`]: id });
     const p2 = await resolveConfig(client, p1);
 
     if (exportData) fs.writeFileSync(`./files/${namespace}.json`, JSON.stringify(p2, null, 2), 'utf-8');
@@ -17,4 +17,4 @@ const getReport = async (namespace, client, id, exportData=false) => {
     return p2;
 };
 
-export default getReport;
+export default getSettings;

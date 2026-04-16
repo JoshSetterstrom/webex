@@ -1,3 +1,0 @@
-const buildReport = async locationId => {
-
-}

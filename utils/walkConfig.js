@@ -17,17 +17,13 @@ const walkConfig = async (client, node, vars, currentPath = '') => {
         if (!isObject(value)) continue;
         if (value.enabled === false) continue;
 
-        const nextPath = currentPath ? `${currentPath}.${key}` : key;
-        const hasPath = typeof value.path === 'string';
-        const hasResolve = typeof value.resolve === 'string' || isObject(value.resolve);
-
-        if (hasPath) {
+        if (typeof value.path === 'string') {
             try {
                 const resolvedPath = interpolatePath(value.path, vars);
 
-                output[key] = await client.safeGet 
-                    ? await client.safeGet(resolvedPath) 
-                    : await client.get(resolvedPath);
+                const res = await client.get(resolvedPath);
+
+                output[key] = value.key ? res[value.key] : res;
             } catch (error) {
                 output[key] = { _error: true, message: error.message };
             };
@@ -35,7 +31,7 @@ const walkConfig = async (client, node, vars, currentPath = '') => {
             continue;
         };
 
-        if (hasResolve) {
+        if (typeof value.resolve === 'string' || isObject(value.resolve)) {
             output[key] = { _resolve: value.resolve };
 
             continue;
@@ -43,7 +39,7 @@ const walkConfig = async (client, node, vars, currentPath = '') => {
 
         const childEntries = Object.entries(value).filter(([childKey, childVal]) => isObject(childVal) && childKey !== 'enabled');
 
-        if (childEntries.length) output[key] = await walkConfig(client, value, vars, nextPath);
+        if (childEntries.length) output[key] = await walkConfig(client, value, vars, currentPath ? `${currentPath}.${key}` : key);
     }
 
     return output;

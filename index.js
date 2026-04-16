@@ -1,14 +1,25 @@
 import Webex from './client/Webex.js';
-import buildLocationReport from './reports/buildLocationReport.js';
-import buildWorkspaceReport from './reports/buildWorkspaceReport.js';
+import createWorkspaceAudits from './audits/createWorkspaceAudits.js';
+import AuditExcelExporter from './audits/AuditExcelExporter.js';
+import createDeviceAudits from './audits/createDeviceAudits.js';
+import createHuntGroupAudits from './audits/createHuntGroupAudits.js';
 
-const webex = new Webex();
+const client = new Webex();
 
-const locationId = 'Y2lzY29zcGFyazovL3VzL0xPQ0FUSU9OLzFkMDI1MjMzLWY0MTctNDE0OC04MTRjLTM5MDlhZDIxZmI5NQ';
-// const workspaceId = 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1BMQUNFLzUxMTJmMjc1LTdkNDEtNDQ4Zi04OTVmLWJiOTQ2M2Q0ODg5MA==';
-const workspaceId = 'Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1BMQUNFL2ZiNTI3N2E5LTc4NmItNGY5Zi1iYmU2LWMxOTY0ODU0ZjVmMg==';
+const stores = "023";
 
-const workspace = await buildWorkspaceReport(webex, workspaceId); 
-// const report = await buildLocationReport(webex, locationId);
+const locations = await client.get('/v1/telephony/config/locations');
 
-// console.log(workspace);
+for ( const store of stores.split(' ') ) {
+    const excel = new AuditExcelExporter();
+
+    const location = locations.locations.find(x => x.name.includes(store));
+    
+    // await createWorkspaceAudits(client, excel, location, store);
+    // await createDeviceAudits(client, excel, location, store);
+    await createHuntGroupAudits(client, excel, location, store);
+    
+    // await excel.write(`${location.name} Audit.xlsx`);
+
+    console.log(client.count)
+};

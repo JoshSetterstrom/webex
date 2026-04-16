@@ -1,0 +1,48 @@
+device:
+  enabled: true
+
+  meta:
+    enabled: true
+    path: /v1/devices/{deviceId}
+
+  settings:
+    enabled: true
+    resolve:
+      from: meta.id
+      path: /v1/telephony/config/devices/{value}/settings
+
+  layout:
+    enabled: true
+    resolve:
+      from: meta.id
+      path: /v1/telephony/config/devices/{value}/layout
+
+  members:
+    enabled: true
+    resolve:
+      from: meta.id
+      path: /v1/telephony/config/devices/{value}/members
+      key: members
+      sort: firstName
+
+  workspace:
+    enabled: true
+
+    meta:
+      enabled: true
+      resolve:
+        from: meta.workspaceId
+        path: /v1/workspaces/{value}
+
+    numbers:
+      enabled: true
+      resolve:
+        from: meta.workspaceId
+        path: /v1/workspaces/{value}/features/numbers
+        key: phoneNumbers
+
+  person:
+    enabled: true
+    resolve:
+      from: meta.personId
+      path: /v1/people/{value}

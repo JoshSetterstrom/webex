@@ -1,4 +1,4 @@
-import getReport from '../services/getReport.js';
+import getReport from '../services/getSettings.js';
 
 const buildLocationReport = async (client, locationId) => {
     const exportData = true;
