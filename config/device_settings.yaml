@@ -11,6 +11,7 @@ device_settings:
   extensions:
     "6000":
       person.phoneNumbers[0].value: "8{storenumber}6000"
+      
     "6001":
       person.phoneNumbers[0].value: "8{storenumber}6001"
 

@@ -4,6 +4,9 @@ import AuditExcelExporter from './audits/AuditExcelExporter.js';
 import createDeviceAudits from './audits/createDeviceAudits.js';
 import createHuntGroupAudits from './audits/createHuntGroupAudits.js';
 
+import fs from 'fs';
+import sleep from './utils/sleep.js';
+
 const client = new Webex();
 
 const stores = "023";

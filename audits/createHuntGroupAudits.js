@@ -6,17 +6,27 @@ import auditHuntGroup from './auditHuntGroup.js';
 
 const createHuntGroupAudits = async (client, excel, location, store) => {
     const huntGroups = await client.get(`/v1/telephony/config/huntGroups?locationId=${location.id}`);
+    const devices = await client.get(`v1/devices?locationId=${location.id}`);
+    
     const config = yaml.load(fs.readFileSync('./config/huntGroup_settings.yaml', 'utf-8'));
 
-    const keys = config?.device_settings?.extensions || {};
-    const global = config?.device_settings?.global_settings || {};
+    // const global = config?.huntGroup_settings?.global_settings || {};
 
-    excel.createHeaders(['displayName'], global, keys);
-    excel.createSheet('Hunt Groups');
+    for ( const huntGroup of huntGroups.huntGroups ) {
+        const key = huntGroup.name.replace(store, '').replace(new Number(store), '');
+        const extensions = config?.huntGroup_settings?.agents[key]
+        
+        console.log(extensions)
 
-    const huntGroup = huntGroups.huntGroups[0];
+        // console.log(huntGroup)
+    }
 
-    await auditHuntGroup(client, config, location.id, huntGroup.id);
+    // excel.createHeaders(['displayName'], global, keys);
+    // excel.createSheet('Hunt Groups');
+
+    // const huntGroup = huntGroups.huntGroups[2];
+
+    // await auditHuntGroup(client, config, location.id, huntGroup.id);
     
     // for ( const device of devices.items ) {
     //     console.log(device.displayName)

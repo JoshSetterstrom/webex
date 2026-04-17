@@ -1,6 +1,3 @@
-import yaml from 'js-yaml';
-import fs from 'fs';
-
 import getSettings from '../services/getSettings.js';
 
 const getNestedValue = (obj, path) => {

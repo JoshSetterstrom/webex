@@ -15,6 +15,7 @@ class Webex {
 
         if (response.status === 405) return null;
 
+        // Handle third party devices where settings and layout are not supported
         if (response.status === 400) {
             const errorCodes = [ 25271, 25417 ];
 
@@ -31,7 +32,7 @@ class Webex {
             err.response = response;
 
             throw err;
-        }
+        };
 
         this.count++;
 
