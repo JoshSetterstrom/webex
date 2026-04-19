@@ -1,148 +1,147 @@
-location:
-  meta:
+meta:
+  enabled: true
+  path: /v1/telephony/config/locations/{locationId}
+
+calling:
+  enabled: false
+
+  dialing:
     enabled: true
-    path: /v1/telephony/config/locations/{locationId}
 
-  calling:
-    enabled: false
+    internalDialing:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/internalDialing
 
-    dialing:
+  callHandling:
+    enabled: true
+
+    outgoingPermission:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/outgoingPermission
+
+    musicOnHold:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/musicOnHold
+
+    intercept:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/intercept
+
+    callRecording:
       enabled: true
 
-      internalDialing:
+      provider:
         enabled: true
-        path: /v1/telephony/config/locations/{locationId}/internalDialing
+        path: /v1/telephony/config/callRecording
 
-    callHandling:
+      announcements:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/callRecording/announcements
+
+      complianceAnnouncement:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/callRecording/complianceAnnouncement
+
+      emergencyCalls:
+        enabled: true
+        path: /v1/telephony/config/locations/{locationId}/callRecording/emergencyCalls
+
+  callingFeatures:
+    enabled: true
+
+    voicemail:
       enabled: true
+      path: /v1/telephony/config/locations/{locationId}/voicemail
 
-      outgoingPermission:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/outgoingPermission
-
-      musicOnHold:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/musicOnHold
-
-      intercept:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/intercept
-
-      callRecording:
-        enabled: true
-
-        provider:
-          enabled: true
-          path: /v1/telephony/config/callRecording
-
-        announcements:
-          enabled: true
-          path: /v1/telephony/config/locations/{locationId}/callRecording/announcements
-
-        complianceAnnouncement:
-          enabled: true
-          path: /v1/telephony/config/locations/{locationId}/callRecording/complianceAnnouncement
-
-        emergencyCalls:
-          enabled: true
-          path: /v1/telephony/config/locations/{locationId}/callRecording/emergencyCalls
-
-    callingFeatures:
+    callCaptions:
       enabled: true
+      path: /v1/telephony/config/locations/{locationId}/callCaptions
 
-      voicemail:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/voicemail
-
-      callCaptions:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/callCaptions
-
-      voicePortal:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/voicePortal
-
-      hotDesking:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/features/hotDesking
-
-      schedules:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/schedules
-
-      callPark:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/callParks/settings
-
-    deviceManagement:
+    voicePortal:
       enabled: true
+      path: /v1/telephony/config/locations/{locationId}/voicePortal
 
-      deviceSettings:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/devices/settings
-
-  pstn:
-    enabled: false
-
-    pstnConfiguration:
+    hotDesking:
       enabled: true
+      path: /v1/telephony/config/locations/{locationId}/features/hotDesking
 
-      mainNumber:
-        enabled: true
-        resolve:
-          from: meta.callingLineId.phoneNumber
-          path: /v1/telephony/config/numbers?number={value}
-          single: true
-          key: phoneNumbers
-
-    emergencyCalling:
+    schedules:
       enabled: true
+      path: /v1/telephony/config/locations/{locationId}/schedules
 
-      callbackNumber:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/features/emergencyCallbackNumber
+    callPark:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/callParks/settings
 
-      emergencyCallNotification:
-        enabled: true
-        path: /v1/telephony/config/locations/{locationId}/emergencyCallNotification
+  deviceManagement:
+    enabled: true
 
-  devices:
-    enabled: false
-    resolve:
-      from: meta.id
-      path: /v1/devices?locationId={value}
+    deviceSettings:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/devices/settings
 
-  workspaces:
-    enabled: false
-    resolve:
-      from: meta.id
-      path: /v1/workspaces?locationId={value}
-      key: items
+pstn:
+  enabled: false
 
-  huntGroups:
-    enabled: false
-    resolve:
-      from: meta.id
-      path: /v1/telephony/config/huntGroups?locationId={value}
-      key: huntGroups
+  pstnConfiguration:
+    enabled: true
 
-  callParkExtensions:
-    enabled: false
-    resolve:
-      from: meta.id
-      path: /v1/telephony/config/callParkExtensions?locationId={value}
-      key: callParkExtensions
+    mainNumber:
+      enabled: true
+      resolve:
+        from: meta.callingLineId.phoneNumber
+        path: /v1/telephony/config/numbers?number={value}
+        single: true
+        key: phoneNumbers
 
-  callParkGroups:
-    enabled: false
-    resolve:
-      from: meta.id
-      path: /v1/telephony/config/locations/{value}/callParks
-      key: callParks
+  emergencyCalling:
+    enabled: true
 
-  callPickup:
-    enabled: false
-    resolve:
-      from: meta.id
-      path: /v1/telephony/config/locations/{value}/callPickups
-      key: callPickups
+    callbackNumber:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/features/emergencyCallbackNumber
+
+    emergencyCallNotification:
+      enabled: true
+      path: /v1/telephony/config/locations/{locationId}/emergencyCallNotification
+
+devices:
+  enabled: false
+  resolve:
+    from: meta.id
+    path: /v1/devices?locationId={value}
+
+workspaces:
+  enabled: false
+  resolve:
+    from: meta.id
+    path: /v1/workspaces?locationId={value}
+    key: items
+
+huntGroups:
+  enabled: false
+  resolve:
+    from: meta.id
+    path: /v1/telephony/config/huntGroups?locationId={value}
+    key: huntGroups
+
+callParkExtensions:
+  enabled: false
+  resolve:
+    from: meta.id
+    path: /v1/telephony/config/callParkExtensions?locationId={value}
+    key: callParkExtensions
+
+callParkGroups:
+  enabled: false
+  resolve:
+    from: meta.id
+    path: /v1/telephony/config/locations/{value}/callParks
+    key: callParks
+
+callPickup:
+  enabled: false
+  resolve:
+    from: meta.id
+    path: /v1/telephony/config/locations/{value}/callPickups
+    key: callPickups

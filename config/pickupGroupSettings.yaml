@@ -1,0 +1,27 @@
+global_setting:
+  settings.meta.name: "{pickupGroupName} 8{storenumber}"
+
+agents:
+  1 Hour Lab:
+    ["6250", "6500"]
+  Cosmetics:
+    ["6100", "6101", "6102", "6103"]
+  Insurance:
+    ["6701", "6702", "6703", "6704", "6705"]
+  Lane and Customer Service:
+    ["6190", "6200", "6210"]
+  Loss Prevention:
+    ["6340", "6341"]
+  Manager and SPC:
+    []
+  Pharmacy:
+    []
+  Tech:
+    [
+      "6060", "6070", "6080", "6240", "6410", "6420", "6430", "6450", "6530", 
+      "6531", "6532", "6540"
+    ]
+  Verification Desk:
+    [
+
+    ]

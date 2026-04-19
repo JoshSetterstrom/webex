@@ -1,21 +1,7 @@
 import getSettings from '../services/getSettings.js';
 import getPSTN from '../services/getPSTN.js';
-
-const getNestedValue = (obj, path) => {
-    const tokens = path
-        .replace(/\[(\d+)\]/g, '.$1')
-        .split('.')
-        .filter(Boolean)
-        .map(x => /^\d+$/.test(x) ? Number(x) : x);
-
-    return tokens.reduce((acc, key) => acc?.[key], obj);
-};
-
-const replacePlaceholders = (value, placeholders) => {
-    if (typeof value !== 'string') return value;
-
-    return value.replace(/\{([^}]+)\}/g, (_, key) => placeholders[key] ?? `{${key}}`);
-};
+import getNestedValue from '../utils/getNestedValue.js';
+import replacePlaceholders from '../utils/replacePlaceholders.js';
 
 const auditWorkspace = async (client, config, locationId, workspaceId) => {
     const exportData = true;
@@ -30,8 +16,8 @@ const auditWorkspace = async (client, config, locationId, workspaceId) => {
     if (!extension) throw new Error('Missing workspace extension');
 
     const template = {
-        ...(config.workspace_settings.global_settings || {}),
-        ...(config.workspace_settings.extensions?.[extension] || {})
+        ...(config.global_settings || {}),
+        ...(config.extensions?.[extension] || {})
     };
 
     const placeholders = { storenumber, ...pstn };

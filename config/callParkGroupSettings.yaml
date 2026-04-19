@@ -1,0 +1,12 @@
+global_settings:
+  meta.name: "LD{storenumber} Call Park Group"
+  meta.callParkExtensions[0].extension: "101"
+  meta.callParkExtensions[0].name: "Call Park 101"
+  meta.callParkExtensions[1].extension: "102"
+  meta.callParkExtensions[1].name: "Call Park 102"
+  meta.callParkExtensions[2].extension: "103"
+  meta.callParkExtensions[2].name: "Call Park 103"
+  meta.callParkExtensions[3].extension: "104"
+  meta.callParkExtensions[3].name: "Call Park 104"
+  meta.callParkExtensions[4].extension: "105"
+  meta.callParkExtensions[4].name: "Call Park 105"

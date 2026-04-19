@@ -1,0 +1,3 @@
+meta:
+  enabled: true
+  path: "/v1/telephony/config/locations/{locationId}/callParks/{callParkGroupId}"

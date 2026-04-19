@@ -7,7 +7,7 @@ class AuditExcelExporter {
         this.headers = [];
     };
 
-    createHeaders = (idColumnns=[], global, keys) => {
+    createHeaders = (idColumnns=[], global={}, keys={}) => {
         this.idColumns = idColumnns;
         let set = new Set();
 

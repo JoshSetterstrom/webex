@@ -1,8 +1,3 @@
-huntGroup:
+meta:
   enabled: true
-
-  meta:
-    enabled: true
-    path: /v1/telephony/config/locations/{locationId}/huntGroups/{huntGroupId}
-
-  
+  path: /v1/telephony/config/locations/{locationId}/huntGroups/{huntGroupId}

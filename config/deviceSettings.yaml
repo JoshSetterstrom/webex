@@ -1,0 +1,664 @@
+global_settings:
+  settings.customEnabled: false
+  layout.lineKeys[0].lineKeyIndex: "1"
+  layout.lineKeys[0].lineKeyType: "PRIMARY_LINE"
+  layout.lineKeys[1].lineKeyIndex: "2"
+  layout.lineKeys[1].lineKeyType: "SPEED_DIAL"
+  layout.lineKeys[1].lineKeyLabel: "Paging"
+  layout.lineKeys[1].lineKeyValue: "6994"
+
+extensions:
+  "6000":
+    person.phoneNumbers[0].value: "8{storenumber}6000"
+    
+  "6001":
+    person.phoneNumbers[0].value: "8{storenumber}6001"
+
+  "6994":
+    members[0].firstName: LD{storenumber} Doorbell
+    members[0].esn: 8{storenumber}6999
+    members[1].firstName: LD{storenumber} Emergency
+    members[1].esn: 8{storenumber}6995
+    members[2].firstName: LD{storenumber} Night Ringer
+    members[2].esn: 8{storenumber}6991
+    members[3].firstName: LD{storenumber} Paging
+    members[3].esn: 8{storenumber}6994
+    settings.customEnabled: ""
+    layout.lineKeys[0].lineKeyIndex: ""
+    layout.lineKeys[0].lineKeyType: ""
+    layout.lineKeys[1].lineKeyIndex: ""
+    layout.lineKeys[1].lineKeyType: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].lineKeyValue: ""
+
+  "6010":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6010
+    members[4].esn: 8{storenumber}6010
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6020":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6020
+    members[4].esn: 8{storenumber}6020
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6030":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6030
+    members[4].esn: 8{storenumber}6030
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6040":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6040
+    members[4].esn: 8{storenumber}6040
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6050":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6050
+    members[4].esn: 8{storenumber}6050
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6051":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6051
+    members[4].esn: 8{storenumber}6051
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6052":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6052
+    members[4].esn: 8{storenumber}6052
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6061":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6061
+    members[4].esn: 8{storenumber}6061
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6062":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6062
+    members[4].esn: 8{storenumber}6062
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6063":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6063
+    members[4].esn: 8{storenumber}6063
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6064":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6064
+    members[4].esn: 8{storenumber}6064
+    members[5].firstName: LD{storenumber} Pharmacy - 6290
+    members[5].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6290":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6290
+    members[4].esn: 8{storenumber}6290
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6360":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6290
+    members[4].esn: 8{storenumber}6290
+    members[5].firstName: LD{storenumber} Pharmacy - 6360
+    members[5].esn: 8{storenumber}6360
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6370":
+    members[0].firstName: LD{storenumber} Pharmacy - 3350
+    members[0].esn: 8{storenumber}3350
+    members[1].firstName: LD{storenumber} Pharmacy - 3351
+    members[1].esn: 8{storenumber}3351
+    members[2].firstName: LD{storenumber} Pharmacy - 3352
+    members[2].esn: 8{storenumber}3352
+    members[3].firstName: LD{storenumber} Pharmacy - 3370
+    members[3].esn: 8{storenumber}3370
+    members[4].firstName: LD{storenumber} Pharmacy - 6290
+    members[4].esn: 8{storenumber}6290
+    members[5].firstName: LD{storenumber} Pharmacy - 6370
+    members[5].esn: 8{storenumber}6370
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].sharedLineIndex: "1"
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[2].sharedLineIndex: "2"
+
+    layout.lineKeys[3].lineKeyIndex: "4"
+    layout.lineKeys[3].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[3].sharedLineIndex: "3"
+
+    layout.lineKeys[5].lineKeyIndex: "6"
+    layout.lineKeys[5].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[5].sharedLineIndex: "4"
+
+    layout.lineKeys[6].lineKeyIndex: "7"
+    layout.lineKeys[6].lineKeyType: "SHARED_LINE"
+    layout.lineKeys[6].sharedLineIndex: "5"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6190":
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "OPEN"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+
+    layout.lineKeys[7].lineKeyIndex: "8"
+    layout.lineKeys[7].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[7].lineKeyLabel: "Pharmacy"
+    layout.lineKeys[7].lineKeyValue: "3350"
+
+    layout.lineKeys[8].lineKeyIndex: "9"
+    layout.lineKeys[8].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[8].lineKeyLabel: "TECH"
+    layout.lineKeys[8].lineKeyValue: "6920"
+
+    layout.lineKeys[9].lineKeyIndex: "10"
+    layout.lineKeys[9].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[9].lineKeyLabel: "Cosmetics"
+    layout.lineKeys[9].lineKeyValue: "6925"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6200":
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "OPEN"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+
+    layout.lineKeys[7].lineKeyIndex: "8"
+    layout.lineKeys[7].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[7].lineKeyLabel: "Pharmacy"
+    layout.lineKeys[7].lineKeyValue: "3350"
+
+    layout.lineKeys[8].lineKeyIndex: "9"
+    layout.lineKeys[8].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[8].lineKeyLabel: "TECH"
+    layout.lineKeys[8].lineKeyValue: "6920"
+
+    layout.lineKeys[9].lineKeyIndex: "10"
+    layout.lineKeys[9].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[9].lineKeyLabel: "Cosmetics"
+    layout.lineKeys[9].lineKeyValue: "6925"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6210":
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "OPEN"
+    layout.lineKeys[1].lineKeyValue: ""
+    layout.lineKeys[1].lineKeyLabel: ""
+
+    layout.lineKeys[7].lineKeyIndex: "8"
+    layout.lineKeys[7].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[7].lineKeyLabel: "Pharmacy"
+    layout.lineKeys[7].lineKeyValue: "3350"
+
+    layout.lineKeys[8].lineKeyIndex: "9"
+    layout.lineKeys[8].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[8].lineKeyLabel: "TECH"
+    layout.lineKeys[8].lineKeyValue: "6920"
+
+    layout.lineKeys[9].lineKeyIndex: "10"
+    layout.lineKeys[9].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[9].lineKeyLabel: "Cosmetics"
+    layout.lineKeys[9].lineKeyValue: "6925"
+
+    layout.lineKeys[11].lineKeyIndex: "12"
+    layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[11].lineKeyLabel: "Paging"
+    layout.lineKeys[11].lineKeyValue: "6994"
