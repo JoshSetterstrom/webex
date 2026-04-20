@@ -5,7 +5,7 @@ const getNestedValue = (obj, path) => {
         .filter(Boolean)
         .map(x => /^\d+$/.test(x) ? Number(x) : x);
 
-    return tokens.reduce((acc, key) => acc?.[key], obj);
+    return tokens.reduce((acc, key) => acc?.[key] === undefined ? "" : acc?.[key], obj);
 };
 
 export default getNestedValue;

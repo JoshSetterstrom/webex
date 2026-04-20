@@ -1,4 +1,5 @@
 import getSettings from '../services/getSettings.js';
+import evaluate from '../utils/evaluate.js';
 import getNestedValue from '../utils/getNestedValue.js';
 import replacePlaceholders from '../utils/replacePlaceholders.js';
 
@@ -25,7 +26,7 @@ const auditDevice = async (client, config, locationId, deviceId) => {
         const expected = replacePlaceholders(templateValue, placeholders);
         const actual = getNestedValue(settings, path);
 
-        audit.push({ path, expected, actual, match: actual === expected });
+        audit.push({ path, ...evaluate(templateValue, actual, expected) });
     };
 
     return [ audit, settings ];

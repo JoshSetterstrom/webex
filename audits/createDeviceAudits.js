@@ -14,6 +14,8 @@ const createDeviceAudits = async (client, excel, location, store) => {
     excel.createHeaders(['displayName'], global, keys);
     excel.createSheet('Devices');
     
+    // const device = devices.items.find(x => x.displayName.includes('6010'));
+
     for ( const device of devices.items ) {
         console.log(device.displayName)
 
@@ -22,7 +24,7 @@ const createDeviceAudits = async (client, excel, location, store) => {
         
             excel.addRow({ displayName: device.displayName }, audit);
         } catch (error) {
-            console.error(`Error auditing device ${device.id}:`, error.message);
+            console.error(`Error auditing device ${device.displayName}:`, error.message);
         }
 
         await sleep(process.env.SLEEP_INTERVAL);

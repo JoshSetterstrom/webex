@@ -9,11 +9,12 @@ const auditHuntGroup = async (client, config, location, huntGroup, store) => {
 
     const settings = await getSettings('huntGroup', client, location.id, huntGroup.id, exportData);
 
-    const key = huntGroup.name.replace(store, '').replace(new Number(store), '');
+    // Confirm name and get correct key
+    const key = huntGroup.name.split('0')[0];
     const extensions = config.agents[key];
 
     if (!extensions) {
-        audit.push({ path: "settings.meta.name", expected: "", actual: huntGroup.name, match: false});
+        audit.push({ path: "settings.meta.name", expected: `${key}${Number(store).toString().padStart(3, '0')}`, actual: huntGroup.name, match: false});
     
         return [ audit, settings ];
     };
@@ -34,7 +35,7 @@ const auditHuntGroup = async (client, config, location, huntGroup, store) => {
 
     const actual = settings.meta.agents.map(x => x.extension).sort((a, b) => a - b);
 
-    audit.push({ path: "agents", expected: expected.join(','), actual: actual.join(','), match: actual === expected});
+    audit.push({ path: "agents", expected: expected.join(','), actual: actual.join(','), match: actual.toString() === expected.toString()});
 
     return [ audit, settings ];
 };

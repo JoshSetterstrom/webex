@@ -40,7 +40,7 @@ const walkConfig = async (client, node, vars, currentPath = '') => {
         const childEntries = Object.entries(value).filter(([childKey, childVal]) => isObject(childVal) && childKey !== 'enabled');
 
         if (childEntries.length) output[key] = await walkConfig(client, value, vars, currentPath ? `${currentPath}.${key}` : key);
-    }
+    };
 
     return output;
 };

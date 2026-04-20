@@ -7,7 +7,7 @@ class AuditExcelExporter {
         this.headers = [];
     };
 
-    createHeaders = (idColumnns=[], global={}, keys={}) => {
+    createHeaders = (idColumnns=[], global={}, keys={}, additional=[]) => {
         this.idColumns = idColumnns;
         let set = new Set();
 
@@ -17,7 +17,7 @@ class AuditExcelExporter {
             for (const key of Object.keys(ext || {})) set.add(key);
         };
         
-        set = [...set].sort();
+        set = [...set, ...additional].sort();
         set.unshift(...idColumnns, 'type');
 
         this.headers = set;
@@ -81,6 +81,8 @@ class AuditExcelExporter {
         for (let col = this.idColumns.length + 1; col <= this.headers.length; col++) {
             const actualCell = this.ws.getRow(actualRowNumber).getCell(col);
             const expectedCell = this.ws.getRow(expectedRowNumber).getCell(col);
+            
+            const DATA = map[this.headers[col - 1]];
 
             actualCell.alignment = { vertical: 'middle', horizontal: 'left', wrapText: true };
             expectedCell.alignment = { vertical: 'middle', horizontal: 'left', wrapText: true };
@@ -88,7 +90,7 @@ class AuditExcelExporter {
             actualCell.border = { top: { style: 'thin' }, bottom: { style: 'thin', color: { argb: 'FFADADAD' } } };
             expectedCell.border = { top: { style: 'thin', color: { argb: 'FFADADAD' } }, bottom: { style: 'thin' } };
 
-            if (String(actualCell.value ?? '') !== String(expectedCell.value ?? '')) {
+            if (DATA?.match !== undefined && !DATA.match) {
                 if (actualCell.value === 'CURRENT VALUE') continue;
                 if (expectedCell.value === 'EXPECTED VALUE') continue;
 

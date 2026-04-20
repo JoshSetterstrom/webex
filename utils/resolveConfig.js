@@ -1,5 +1,3 @@
-import flattenSingle from "./flattenSingle.js";
-
 const isPlainObject = value => value !== null && typeof value === "object" && !Array.isArray(value);
 const isTraversable = value => value !== null && typeof value === "object";
 
@@ -36,6 +34,10 @@ const sortResolvedData = (data, sort) => {
 
 		return String(av).localeCompare(String(bv));
 	});
+};
+
+const flattenSingle = (result, key) => {
+	console.log(result, key)
 };
 
 const applyResolveOptions = (result, resolve) => {

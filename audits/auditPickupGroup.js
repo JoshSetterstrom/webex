@@ -34,7 +34,7 @@ const auditPickupGroup = async (client, config, location, pickupGroup, store) =>
     
     const actual = settings.meta.agents.map(x => x.numbers[0].extension).sort((a, b) => a - b);
 
-    audit.push({ path: "agents", expected: expected.join(','), actual: actual.join(','), match: actual === expected});
+    audit.push({ path: "agents", expected: expected.join(','), actual: actual.join(','), match: actual.toString() === expected.toString()});
 
     return [ audit, settings ];
 };

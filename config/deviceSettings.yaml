@@ -6,6 +6,7 @@ global_settings:
   layout.lineKeys[1].lineKeyType: "SPEED_DIAL"
   layout.lineKeys[1].lineKeyLabel: "Paging"
   layout.lineKeys[1].lineKeyValue: "6994"
+  meta.product: "Cisco 7821"
 
 extensions:
   "6000":
@@ -15,6 +16,7 @@ extensions:
     person.phoneNumbers[0].value: "8{storenumber}6001"
 
   "6994":
+    meta.product: "Algo Customer Managed"
     members[0].firstName: LD{storenumber} Doorbell
     members[0].esn: 8{storenumber}6999
     members[1].firstName: LD{storenumber} Emergency
@@ -31,7 +33,9 @@ extensions:
     layout.lineKeys[1].lineKeyLabel: ""
     layout.lineKeys[1].lineKeyValue: ""
 
+# Pharmacy
   "6010":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -72,6 +76,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6020":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -112,6 +117,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6030":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -152,6 +158,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6040":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -192,6 +199,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6050":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -232,6 +240,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6051":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -272,6 +281,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6052":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -312,6 +322,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6061":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -352,6 +363,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6062":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -392,6 +404,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6063":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -432,6 +445,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6064":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -472,6 +486,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6290":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -506,6 +521,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6360":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -546,6 +562,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6370":
+    meta.product: "Cisco 7861"
     members[0].firstName: LD{storenumber} Pharmacy - 3350
     members[0].esn: 8{storenumber}3350
     members[1].firstName: LD{storenumber} Pharmacy - 3351
@@ -585,7 +602,9 @@ extensions:
     layout.lineKeys[11].lineKeyLabel: "Paging"
     layout.lineKeys[11].lineKeyValue: "6994"
 
+# Customer Service
   "6190":
+    meta.product: "Cisco 7861"
     layout.lineKeys[1].lineKeyIndex: "2"
     layout.lineKeys[1].lineKeyType: "OPEN"
     layout.lineKeys[1].lineKeyValue: ""
@@ -612,6 +631,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6200":
+    meta.product: "Cisco 7861"
     layout.lineKeys[1].lineKeyIndex: "2"
     layout.lineKeys[1].lineKeyType: "OPEN"
     layout.lineKeys[1].lineKeyValue: ""
@@ -638,6 +658,7 @@ extensions:
     layout.lineKeys[11].lineKeyValue: "6994"
 
   "6210":
+    meta.product: "Cisco 7861"
     layout.lineKeys[1].lineKeyIndex: "2"
     layout.lineKeys[1].lineKeyType: "OPEN"
     layout.lineKeys[1].lineKeyValue: ""
@@ -662,3 +683,27 @@ extensions:
     layout.lineKeys[11].lineKeyType: "SPEED_DIAL"
     layout.lineKeys[11].lineKeyLabel: "Paging"
     layout.lineKeys[11].lineKeyValue: "6994"
+
+  "6230":
+    meta.product: "Cisco 7841"
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "OPEN"
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].lineKeyValue: ""
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[2].lineKeyLabel: "Paging"
+    layout.lineKeys[2].lineKeyValue: "6994"
+
+  "6341":
+    meta.product: "Cisco 7841"
+    layout.lineKeys[1].lineKeyIndex: "2"
+    layout.lineKeys[1].lineKeyType: "OPEN"
+    layout.lineKeys[1].lineKeyLabel: ""
+    layout.lineKeys[1].lineKeyValue: ""
+
+    layout.lineKeys[2].lineKeyIndex: "3"
+    layout.lineKeys[2].lineKeyType: "SPEED_DIAL"
+    layout.lineKeys[2].lineKeyLabel: "Paging"
+    layout.lineKeys[2].lineKeyValue: "6994"
