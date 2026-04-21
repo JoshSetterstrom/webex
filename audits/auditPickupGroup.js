@@ -28,7 +28,7 @@ const auditPickupGroup = async (client, config, location, pickupGroup, store) =>
     const expected = extensions.map(e => {
         const workspace = workspaces.items.find(ws => ws.displayName.includes(e));
 
-        return workspace?.displayName.split(' - ').at(-1);
+        if (workspace || (!workspace && ['6000', '6001'].includes(e))) return e;
     }).filter(x => x).sort((a, b) => a - b);;
 
     

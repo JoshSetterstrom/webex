@@ -177,15 +177,15 @@ extensions:
     features.callerId.selected: "CUSTOM"
 
   "6410":
-    meta.displayName: "LD{store} AVS - 6080"
-    features.callerId.dialByName: "LD{store} AVS - 6080"
+    meta.displayName: "LD{store} AVS - 6410"
+    features.callerId.dialByName: "LD{store} AVS - 6410"
     features.callerId.customNumber: "{TECH}"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Tech"
     features.callerId.selected: "CUSTOM"
 
   "6420":
-    meta.displayName: "LD{store} AVS - 6080"
-    features.callerId.dialByName: "LD{store} AVS - 6080"
+    meta.displayName: "LD{store} AVS - 6420"
+    features.callerId.dialByName: "LD{store} AVS - 6420"
     features.callerId.customNumber: "{TECH}"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Tech"
     features.callerId.selected: "CUSTOM"
@@ -305,6 +305,11 @@ extensions:
     features.callerId.dialByName: "LD{store} Photo - 6250"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
 
+  "6251":
+    meta.displayName: "LD{store} Photo - 6251"
+    features.callerId.dialByName: "LD{store} Photo - 6251"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+
   "6260":
     meta.displayName: "LD{store} Photo - 6260"
     features.callerId.dialByName: "LD{store} Photo - 6260"
@@ -315,9 +320,24 @@ extensions:
     features.callerId.dialByName: "LD{store} LAB - 6230"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
 
+  "6231":
+    meta.displayName: "LD{store} LAB - 6231"
+    features.callerId.dialByName: "LD{store} LAB - 6231"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+
   "6500":
     meta.displayName: "LD{store} LAB - 6500"
     features.callerId.dialByName: "LD{store} LAB - 6500"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+
+  "6501":
+    meta.displayName: "LD{store} LAB - 6501"
+    features.callerId.dialByName: "LD{store} LAB - 6501"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+
+  "6502":
+    meta.displayName: "LD{store} LAB - 6502"
+    features.callerId.dialByName: "LD{store} LAB - 6502"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
 
   # Canada Post
@@ -386,6 +406,26 @@ extensions:
     meta.displayName: "LD{store} Supervisor - 6350"
     features.callerId.dialByName: "LD{store} Supervisor - 6350"
 
+  "6990":
+    meta.displayName: "LD{store} NOC - 6990"
+    features.callerId.dialByName: "LD{store} NOC - 6990"
+
+  "6090":
+    meta.displayName: "LD{store} Staff - 6090"
+    features.callerId.dialByName: "LD{store} Staff - 6090"
+
+  "6710":
+    meta.displayName: "LD{store} Kiosk - 6710"
+    features.callerId.dialByName: "LD{store} Kiosk - 6710"
+
+  "6750":
+    meta.displayName: "LD{store} TC - 6750"
+    features.callerId.dialByName: "LD{store} TC - 6750"
+
+  "6850":
+    meta.displayName: "LD{store} Training - 6850"
+    features.callerId.dialByName: "LD{store} Training - 6850"
+
   # Paging
   "6991":
     meta.displayName: "LD{store} Night Ringer - 6991"
@@ -431,6 +471,10 @@ extensions:
   "6311":
     meta.displayName: "LD{store} Ecomm - 6311"
     features.callerId.dialByName: "LD{store} Ecomm - 6311"
+
+  "6312":
+    meta.displayName: "LD{store} Ecomm - 6312"
+    features.callerId.dialByName: "LD{store} Ecomm - 6312"
 
   "6320":
     meta.displayName: "LD{store} Receiving - 6320"

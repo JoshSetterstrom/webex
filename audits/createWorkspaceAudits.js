@@ -31,14 +31,14 @@ const createWorkspaceAudits = async (client, excel, location, store) => {
     excel.createSheet('Workspaces');
     
     for ( const workspace of workspaces.items ) {
-        console.log(workspace.id)
+        console.log(workspace.displayName)
 
         try {
             const [ audit, settings ] = await auditWorkspace(client, config, devices.items, location.id, workspace.id, store);
 
             excel.addRow({extension: settings?.features?.numbers?.[0]?.extension}, audit);
         } catch (error) {
-            console.error(`Error auditing workspace ${workspace.id}:`, error.message);
+            console.error(`Error auditing workspace ${workspace.displayName}:`, error.message);
         };
 
         await sleep(process.env.SLEEP_INTERVAL);

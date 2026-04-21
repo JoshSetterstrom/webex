@@ -10,7 +10,7 @@ const auditHuntGroup = async (client, config, location, huntGroup, store) => {
     const settings = await getSettings('huntGroup', client, location.id, huntGroup.id, exportData);
 
     // Confirm name and get correct key
-    const key = huntGroup.name.split('0')[0];
+    const key = huntGroup.name.replace(/\d+$/, '');
     const extensions = config.agents[key];
 
     if (!extensions) {
