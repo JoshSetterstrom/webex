@@ -91,7 +91,6 @@ pstn:
       resolve:
         from: meta.callingLineId.phoneNumber
         path: /v1/telephony/config/numbers?number={value}
-        single: true
         key: phoneNumbers
 
   emergencyCalling:

@@ -1,18 +1,17 @@
-const evaluate = (val, actual, expected) => {
-    const operators = [">=", "<=", ">", "<", "!=="];
-    
-    const operator = operators.find(x => val.toString().includes(x));
+const evaluate = (templateValue, actual, expected) => {    
+    const [ _, operator, value ] = templateValue.toString().match(/^(>=|<=|!==|>|<)\s*(.+)$/) || [];
 
-    if (operator) actual = Number(actual);
-    
-    switch(operator) {
-        case "!==": return { actual, expected, match: actual !== Number(expected.replace(operator, '').trim()) };
-        case ">=": return { actual, expected, match: actual >= Number(expected.replace(operator, '').trim()) };
-        case "<=": return { actual, expected, match: actual <= Number(expected.replace(operator, '').trim()) };
-        case ">": return { actual, expected, match: actual > Number(expected.replace(operator, '').trim()) };
-        case "<": return { actual, expected, match: actual < Number(expected.replace(operator, '').trim()) };
-        default: return { actual, expected, match: actual.toString() === expected.toString() };
+    if (!operator) return { actual, expected, match: actual.toString() === expected.toString() };
+
+    const ops = {
+        "!==": (x, y) => x !== y,
+        ">=": (x, y) => x >= y,
+        "<=": (x, y) => x <= y,
+        ">": (x, y) => x > y,
+        "<": (x, y) => x < y
     };
+
+    return { actual, expected, match: ops[operator](Number(actual), Number(value)) };
 };
 
 export default evaluate;

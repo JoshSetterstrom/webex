@@ -35,6 +35,8 @@ const auditWorkspace = async (client, config, devices, locationId, workspaceId, 
         const expected = replacePlaceholders(templateValue, placeholders);
         const actual = getNestedValue(settings, path);
 
+        console.log({ path, ...evaluate(templateValue, actual, expected) })
+
         audit.push({ path, ...evaluate(templateValue, actual, expected) });
     }
 

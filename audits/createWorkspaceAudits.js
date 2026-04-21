@@ -29,20 +29,22 @@ const createWorkspaceAudits = async (client, excel, location, store) => {
 
     excel.createHeaders(['extension'], global, keys);
     excel.createSheet('Workspaces');
+
+    const workspace = workspaces.items.find(x => x.displayName.includes('6290'))
     
-    for ( const workspace of workspaces.items ) {
+    // for ( const workspace of workspaces.items ) {
         console.log(workspace.displayName)
 
-        try {
+        // try {
             const [ audit, settings ] = await auditWorkspace(client, config, devices.items, location.id, workspace.id, store);
 
             excel.addRow({extension: settings?.features?.numbers?.[0]?.extension}, audit);
-        } catch (error) {
-            console.error(`Error auditing workspace ${workspace.displayName}:`, error.message);
-        };
+        // } catch (error) {
+        //     console.error(`Error auditing workspace ${workspace.displayName}:`, error.message);
+        // };
 
-        await sleep(process.env.SLEEP_INTERVAL);
-    };
+        // await sleep(process.env.SLEEP_INTERVAL);
+    // };
 };
 
 export default createWorkspaceAudits;

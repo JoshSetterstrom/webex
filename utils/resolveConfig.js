@@ -36,15 +36,10 @@ const sortResolvedData = (data, sort) => {
 	});
 };
 
-const flattenSingle = (result, key) => {
-	console.log(result, key)
-};
-
 const applyResolveOptions = (result, resolve) => {
 	let data;
 
-	if (resolve.single) data = flattenSingle(result, resolve.key || "items");
-	else if (resolve.key) data = result?.[resolve.key];
+	if (resolve.key) data = result?.[resolve.key];
 	else data = result;
 
 	return sortResolvedData(data, resolve.sort);

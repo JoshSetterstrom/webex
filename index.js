@@ -23,12 +23,12 @@ for ( const store of stores.split(' ') ) {
     if (!location) continue;
     
     await createWorkspaceAudits(client, excel, location, store);
-    await createDeviceAudits(client, excel, location, store);
-    await createHuntGroupAudits(client, excel, location, store);
-    await createPickupGroupAudits(client, excel, location, store);
-    await createCallParkAudits(client, excel, location, store);
+    // await createDeviceAudits(client, excel, location, store);
+    // await createHuntGroupAudits(client, excel, location, store);
+    // await createPickupGroupAudits(client, excel, location, store);
+    // await createCallParkAudits(client, excel, location, store);
     
-    await excel.write(`./files/${location.name} Audit.xlsx`);
+    // await excel.write(`./files/${location.name} Audit.xlsx`);
 
     const end = performance.now();
 
