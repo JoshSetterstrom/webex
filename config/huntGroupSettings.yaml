@@ -1,23 +1,19 @@
 global_setting:
 
 agents:
-  AllPhones:
-    ["*"]
-  CanadaPost:
+  Canada Post:
     ["6800", "6801"]
   Cosmetics:
     ["6100", "6101", "6102", "6103"]
-  GI:
+  Customer Service:
     ["6190", "6200", "6210"]
   Insurance:
     ["6701", "6702", "6703", "6704", "6705"]
-  NightLine:
+  Night Ringer:
     ["*"]
-  PhotoFinishing:
+  Photo Finishing:
     ["6250", "6260"]
-  Service:
-    ["6190", "6200", "6210"]
-  TECH:
+  Tech:
     [
       "6060", "6070", "6071", "6080", "6240", "6250", "6260", "6410", "6420", "6430",
       "6450", "6530", "6531", "6532", "6540"

@@ -7,7 +7,7 @@ const getPSTN = async (client, locationId) => {
     return {
         "IVR": numbers.find(x => name(x).includes('ATEB'))?.phoneNumber,
         "General Inquiries": numbers.find(x => name(x).includes('General'))?.phoneNumber,
-        "TECH": numbers.find(x => name(x).includes('TECH'))?.phoneNumber,
+        "TECH": numbers.find(x => (name(x).includes('Tech') || name(x).includes('TECH')))?.phoneNumber,
         "Doctors Line": numbers.find(x => name(x).includes('6290'))?.phoneNumber,
         "Photo Finishing": numbers.find(x => name(x).includes('Photo'))?.phoneNumber,
         "Insurance": numbers.find(x => name(x).includes('Insurance'))?.phoneNumber,

@@ -29,13 +29,11 @@ const auditWorkspace = async (client, config, devices, locationId, workspaceId, 
         ...(config.extensions?.[extension] || {})
     };
 
-    const placeholders = { store, storenumber: Number(store), ...pstn };
+    const placeholders = { store, storenumber: Number(store).toString().padStart(2, '0'), ...pstn };
 
     for (const [ path, templateValue ] of Object.entries(template)) {
         const expected = replacePlaceholders(templateValue, placeholders);
         const actual = getNestedValue(settings, path);
-
-        console.log({ path, ...evaluate(templateValue, actual, expected) })
 
         audit.push({ path, ...evaluate(templateValue, actual, expected) });
     }

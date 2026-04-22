@@ -1,7 +1,8 @@
 global_settings:
   features.callerId.externalCallerIdNamePolicy: "OTHER"
   features.callerId.customExternalCallerIdName: "LD{storenumber} Cust Svc"
-  features.callerId.selected: "LOCATION_NUMBER"
+  features.callerId.selected: "CUSTOM"
+  features.callerId.customNumber: "{General Inquiries}"
   license.name: "Webex Calling - Workspaces"
   devices.length: "1"
 
@@ -218,6 +219,13 @@ extensions:
     features.callerId.customExternalCallerIdName: "LD{storenumber} Tech"
     features.callerId.selected: "CUSTOM"
 
+  "6540":
+    meta.displayName: "LD{store} Cameras - 6540"
+    features.callerId.dialByName: "LD{store} Cameras - 6540"
+    features.callerId.customNumber: "{TECH}"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Tech"
+    features.callerId.selected: "CUSTOM"
+
   "6531":
     meta.displayName: "LD{store} Cameras - 6531"
     features.callerId.dialByName: "LD{store} Cameras - 6531"
@@ -304,78 +312,93 @@ extensions:
     meta.displayName: "LD{store} Photo - 6250"
     features.callerId.dialByName: "LD{store} Photo - 6250"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6251":
     meta.displayName: "LD{store} Photo - 6251"
     features.callerId.dialByName: "LD{store} Photo - 6251"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6260":
     meta.displayName: "LD{store} Photo - 6260"
     features.callerId.dialByName: "LD{store} Photo - 6260"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6230":
     meta.displayName: "LD{store} LAB - 6230"
     features.callerId.dialByName: "LD{store} LAB - 6230"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6231":
     meta.displayName: "LD{store} LAB - 6231"
     features.callerId.dialByName: "LD{store} LAB - 6231"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6500":
     meta.displayName: "LD{store} LAB - 6500"
     features.callerId.dialByName: "LD{store} LAB - 6500"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6501":
     meta.displayName: "LD{store} LAB - 6501"
     features.callerId.dialByName: "LD{store} LAB - 6501"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   "6502":
     meta.displayName: "LD{store} LAB - 6502"
     features.callerId.dialByName: "LD{store} LAB - 6502"
     features.callerId.customExternalCallerIdName: "LD{storenumber} Photos"
+    features.callerId.customNumber: "{Photo Finishing}"
 
   # Canada Post
   "6800":
     meta.displayName: "LD{store} CPC - 6800"
     features.callerId.dialByName: "LD{store} CPC - 6800"
     features.callerId.customNumber: "{Canada Post}"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} CanPost"
 
   "6801":
     meta.displayName: "LD{store} CPC - 6801"
     features.callerId.dialByName: "LD{store} CPC - 6801"
     features.callerId.customNumber: "{Canada Post}"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} CanPost"
 
   # Insurance:
   "6701":
     features.callerId.customNumber: "{Insurance}"
     features.callerId.dialByName: "LD{store} INS - 6701"
     meta.displayName: "LD{store} INS - 6701"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Insurance"
 
   "6702":
     features.callerId.customNumber: "{Insurance}"
     features.callerId.dialByName: "LD{store} INS - 6702"
     meta.displayName: "LD{store} INS - 6702"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Insurance"
 
   "6703":
     features.callerId.customNumber: "{Insurance}"
     features.callerId.dialByName: "LD{store} INS - 6703"
     meta.displayName: "LD{store} INS - 6703"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Insurance"
 
   "6704":
     features.callerId.customNumber: "{Insurance}"
     features.callerId.dialByName: "LD{store} INS - 6704"
     meta.displayName: "LD{store} INS - 6704"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Insurance"
 
   "6705":
     features.callerId.customNumber: "{Insurance}"
     features.callerId.dialByName: "LD{store} INS - 6705"
     meta.displayName: "LD{store} INS - 6705"
+    features.callerId.customExternalCallerIdName: "LD{storenumber} Insurance"
 
   # Manager & SPC
   "6000":
@@ -428,40 +451,41 @@ extensions:
 
   # Paging
   "6991":
-    meta.displayName: "LD{store} Night Ringer - 6991"
-    features.callerId.dialByName: "LD{store} Night Ringer - 6991"
+    meta.displayName: "LD{store} Night Ringer"
+    features.callerId.dialByName: "LD{store} Night Ringer"
     features.callerId.customExternalCallerIdName: ""
     features.callerId.customNumber: ""
     features.callerId.externalCallerIdNamePolicy: "DIRECT_LINE"
-    
+    features.callerId.selected: "LOCATION_NUMBER"
     devices.length: "0"
-
+    
   "6994":
-    meta.displayName: "LD{store} Paging - 6994"
-    features.callerId.dialByName: "LD{store} Paging - 6994"
+    meta.displayName: "LD{store} Paging"
+    features.callerId.dialByName: "LD{store} Paging"
     features.callerId.customExternalCallerIdName: ""
     features.callerId.customNumber: ""
     features.callerId.externalCallerIdNamePolicy: "DIRECT_LINE"
+    features.callerId.selected: "LOCATION_NUMBER"
+    devices.length: "1"
     
-
   "6995":
-    meta.displayName: "LD{store} Emergency - 6995"
-    features.callerId.dialByName: "LD{store} Emergency - 6995"
+    meta.displayName: "LD{store} Emergency"
+    features.callerId.dialByName: "LD{store} Emergency"
     features.callerId.customExternalCallerIdName: ""
     features.callerId.customNumber: ""
     features.callerId.externalCallerIdNamePolicy: "DIRECT_LINE"
-    
+    features.callerId.selected: "LOCATION_NUMBER"
     devices.length: "0"
-
+    
   "6999":
-    meta.displayName: "LD{store} Doorbell - 6999"
-    features.callerId.dialByName: "LD{store} Doorbell - 6999"
+    meta.displayName: "LD{store} Doorbell"
+    features.callerId.dialByName: "LD{store} Doorbell"
     features.callerId.customExternalCallerIdName: ""
     features.callerId.customNumber: ""
     features.callerId.externalCallerIdNamePolicy: "DIRECT_LINE"
-    
+    features.callerId.selected: "LOCATION_NUMBER"
     devices.length: "0"
-
+    
   #Receiving
   "6310":
     meta.displayName: "LD{store} Verification - 6310"

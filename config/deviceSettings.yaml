@@ -1,5 +1,4 @@
 global_settings:
-  settings.customEnabled: false
   layout.lineKeys[0].lineKeyIndex: "1"
   layout.lineKeys[0].lineKeyType: "PRIMARY_LINE"
   layout.lineKeys[1].lineKeyIndex: "2"
@@ -25,7 +24,6 @@ extensions:
     members[2].esn: 8{storenumber}6991
     members[3].firstName: LD{storenumber} Paging
     members[3].esn: 8{storenumber}6994
-    settings.customEnabled: ""
     layout.lineKeys[0].lineKeyIndex: ""
     layout.lineKeys[0].lineKeyType: ""
     layout.lineKeys[1].lineKeyIndex: ""

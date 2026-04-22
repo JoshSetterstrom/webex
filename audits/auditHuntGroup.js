@@ -9,15 +9,12 @@ const auditHuntGroup = async (client, config, location, huntGroup, store) => {
 
     const settings = await getSettings('huntGroup', client, location.id, huntGroup.id, exportData);
 
-    // Confirm name and get correct key
-    const key = huntGroup.name.replace(/\d+$/, '');
+    const key = huntGroup.name.replace(`LD${store} `, '').replace(/\d+$/, '');
     const extensions = config.agents[key];
 
-    if (!extensions) {
-        audit.push({ path: "settings.meta.name", expected: `${key}${Number(store).toString().padStart(3, '0')}`, actual: huntGroup.name, match: false});
-    
-        return [ audit, settings ];
-    };
+    audit.push({ path: "settings.meta.name", expected: `LD${store} ${key}`, actual: huntGroup.name, match: `LD${store} ${key}` === huntGroup.name});
+
+    if (!extensions) return [ audit, settings ];
 
     if (extensions.includes('*')) {
         const agents = settings.meta.agents.map(x => x.extension)

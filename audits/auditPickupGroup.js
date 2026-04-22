@@ -8,14 +8,12 @@ const auditPickupGroup = async (client, config, location, pickupGroup, store) =>
 
     const settings = await getSettings('pickupGroup', client, location.id, pickupGroup.id, exportData);
 
-    const key = pickupGroup.name.replace(`8${store}`, '').trim();
+    const key = pickupGroup.name.replace(`LD${store} `, '').replace(`8${store}`, '').trim();
     const extensions = config.agents[key];
 
-    if (!extensions) {
-        audit.push({ path: "settings.meta.name", expected: "", actual: pickupGroup.name, match: false});
-    
-        return [ audit, settings ];
-    };
+    audit.push({ path: "settings.meta.name", expected: `LD${store} ${key}`, actual: pickupGroup.name, match: `LD${store} ${key}` === pickupGroup.name});
+
+    if (!extensions) return [ audit, settings ];
 
     if (extensions.includes('*')) {
         const agents = settings.meta.agents.map(x => x.numbers[0].extension);
