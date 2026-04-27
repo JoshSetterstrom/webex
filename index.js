@@ -9,28 +9,28 @@ import createCallParkAudits from './audits/createCallParkAudits.js';
 
 const client = new Webex();
 
-const stores = "003";
+// const stores = "041 042 044 045 046 047 048 050 051 052";
 
 const locations = await client.get('/v1/telephony/config/locations');
 
-for ( const store of stores.split(' ') ) {
-    const start = performance.now();
+// for ( const store of stores.split(' ') ) {
+//     const start = performance.now();
 
-    const excel = new AuditExcelExporter();
+//     const excel = new AuditExcelExporter();
 
-    const location = locations.locations.find(x => x.name.includes(store));
+//     const location = locations.locations.find(x => x.name.includes(store));
     
-    await createWorkspaceAudits(client, excel, location, store);
-    // await createDeviceAudits(client, excel, location, store);
-    // await createHuntGroupAudits(client, excel, location, store);
-    // await createPickupGroupAudits(client, excel, location, store);
-    // await createCallParkAudits(client, excel, location, store);
+//     await createWorkspaceAudits(client, excel, location, store);
+//     await createDeviceAudits(client, excel, location, store);
+//     await createHuntGroupAudits(client, excel, location, store);
+//     await createPickupGroupAudits(client, excel, location, store);
+//     await createCallParkAudits(client, excel, location, store);
     
-    await excel.write(`./files/${location.name} Audit.xlsx`);
+//     await excel.write(`./files/${location.name} Audit.xlsx`);
 
-    const end = performance.now();
+//     const end = performance.now();
 
-    console.log(`${client.count} total calls in ${((end - start)/1000).toFixed(1)} seconds`);
+//     console.log(`${client.count} total calls in ${((end - start)/1000).toFixed(1)} seconds`);
 
-    client.count = 0;
-};
+//     client.count = 0;
+// };

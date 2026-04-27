@@ -52,6 +52,20 @@ class Webex {
 
         return response.data;
     };
+
+    post = async (path, body) => {
+        const url = `https://webexapis.com${path}`;
+
+        const response = await axios.post(url, body, { headers: this.headers });
+
+        if (response.status === 405) return null;
+
+        if (response.status < 200 || response.status >= 300) {
+            throw new Error(`Webex API ${response.status}: ${JSON.stringify(response.data)}`);
+        };
+
+        return response;
+    };
 };
 
 export default Webex;
