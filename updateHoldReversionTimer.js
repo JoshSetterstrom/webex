@@ -2,20 +2,16 @@ import Webex from './client/Webex.js';
 import axios from 'axios';
 import https from 'https';
 import qs from 'qs';
-import Jetty from 'jetty';
 
 const VALID_PRODUCTS = ["Cisco 7821", "Cisco 7841", "Cisco 7861"];
 
 const client = new Webex();
 const agent = new https.Agent({ rejectUnauthorized: false });
-const jetty = new Jetty(process.stdout);
 
 const locations = await client.get('/v1/telephony/config/locations');
 const location = locations.locations.find(x => x.name.includes('200'));
 
 const devices = await client.get(`/v1/devices?locationId=${location.id}`);
-
-jetty.clear();
 
 // const getDeviceWebAccessValue = async (deviceId) => {
 //     try {
